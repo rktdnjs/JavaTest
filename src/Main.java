@@ -7,7 +7,9 @@ public class Main {
         double pi = 3.14;
         char ch = 'a';
         String str = "abc";
+        int y = 124;
         
+        System.out.println(y);
         System.out.println(x);
         System.out.println(pi);
         System.out.println(ch);
