@@ -1,21 +1,31 @@
 public class Main {
     public static void main(String args[]) {
         /*
-        문자 리터럴 및 문자열 리터럴
-        'A'와 같이 작은따옴표로 문자 하나를 감산 것을 문자 리터럴이라고 한다. 두 문자 이상은 큰 따옴표로 감싼다. 이는 문자열 리터럴이라고 한다.
-        char ch = 'J';  (char은 문자를 저장하는 것이므로 문자열을 저장할 수 없다.)
-        String name = "Java"; (변수 name에 문자열 리터럴 Java를 저장함)
+        문자열 결함.
+        숫자 뿐만이 아니라 두 문자열을 합칠 때도 덧셈을 쓸 수 있다.
+        String name = "Ja" + "va";
+        String str = name + 8.0;
         
-        문자열 리터럴은 "" 안에 아무 문자도 넣지 않는 것을 허용함. => 빈 문자열
-        그에 반에 문자 리터럴은 반드시 '' 안에 하나의 문자가 있어야 한다.
+        덧셈 연산자는 피연산자 중 어느 한 쪽이 String 이면 나머지 한 쪽을 String 으로 변환한다음 두 String 을 결합한다.
+        예를들어 7 + "7"을 계산할 때 7이 String 이 아니므로 먼저 7을 String 으로 변환한 다음 "7" + "7"을 수행하여 77을 얻는다.
+        7 + ""을 계산하게 되면 ""은 빈 문자열이기 때문에 계산결과는 "7"이다.
         
-        String str = "";
-        char ch = '';  (에러, '' 안에 반드시 하나의 문자가 필요)
-        char ch = ' ';  (공백 문자로 변수 ch를 초기화)
-        
-        원래 String은 클래스 이므로 객체를 생성하는 연산자 new를 사용해야 하지만 특별히 아래와 같은 표현도 허용한다.
-        String name = new String("Java"); (String 객체를 생성)
-        String name = "Java"; (위의 문장을 간단히.)
+        이때 왼쪽에서 오른쪽으로 연산을 수행하기 때문에 순서에 따라 결과값이 바뀜을 유의하자.
+        예를 들어서 "" + 7 + 7 = 77
+        7 + 7 + "" = 14
+        이런식으로 나온다.
         */
+        
+        String name = "Ja" + "va";
+        String str = name + 8.0;
+        
+        System.out.println(name);
+        System.out.println(str);
+        System.out.println(7 + " ");
+        System.out.println(7 + "");
+        System.out.println(" " + 7);
+        System.out.println("" + "");
+        System.out.println(7 + 7 + "");   
+        System.out.println("" + 7+ 7);
     }
 }
