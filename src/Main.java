@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String args[]) {
-        /* 기본형의 종류와 범위
+        /* 기본형의 종류와 범위 57
         기본형에는 모두 8개의 타입이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
         정수형에서는 int 가 기본이고, 실수형에서는 double이 기본이다.
                 1    2    4    8    byte
