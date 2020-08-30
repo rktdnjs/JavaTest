@@ -10,8 +10,7 @@ public class Main {
         y = tmp;  (tmp에 저장된 값을 y에 저장)
         */
         
-        int x = 10; 
-        int y = 5;
+        int x = 10; int y = 5;
         System.out.println("x="+x);
         System.out.println("y="+y);
         
