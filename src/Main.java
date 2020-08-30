@@ -1,17 +1,24 @@
 public class Main {
     public static void main(String args[]) {
-        /* 기본형과 자료형 56
-        자료형에는 문자형(char), 정수형(byte, short, int, long), 실수형(float, douoble) 등.
-        변수를 선언할때는 저장하려는 값의 특성을 고려하여 가장 알맞은 자료형을 변수의 타입으로 선택하면 된다.
+        /* 기본형의 종류와 범위
+        기본형에는 모두 8개의 타입이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
+        정수형에서는 int 가 기본이고, 실수형에서는 double이 기본이다.
+                1    2    4    8    byte
+        논리형 boolean
+        문자형       char
+        정수형 byte  short int  long
+        실수형           float double
         
-        자료형은 크게 기본형과 참조형 2가지로 나눌 수 있다. 기본형 변수는 실제 값을 저장하는 반면
-        참조형 변수는 어떤 값이 저장되어 있는 주소를 값으로 갖는다.
-        자바는 C언어와 달리 참조형 변수 간의 연산을 할 수 ㅇ벗으므로 실제 연산에 사용되는 것은 모두 기본형 변수이다.
+        기본 자료형의 종류와 크기는 반드시 외워야 하며, 도움되는 팁들이 몇가지 있다.
+        boolean 은 true false 두 가지 값만 표현할 수 있으면 되므로 가장 작은 크기인 1 byte
+        char은 자바에서 유니코드(2 byte 문자체계)를 사용하므로 2 byte
+        byte는 크기가 1 byte라서 byte
+        int(4byte)를 기준으로 짧아서 short(2byte), 길어서 long(8byte)
+        float는 실수값을 부동소수점(floating-point)방식으로 저장하기 때문에 float.
+        double은 float보다 두 배의 크기(8byte)를 갖기 때문에 double.
         
-        기본형(primitive type)
-        논리형(boolean), 문자형(char), 정수형(byte, short, int, long), 실수형(float, double) 계산을 위한 실제 값을 저장한다.
-        참조형(reference type)
-        객체의 주소를 저장한다. 8개의 기본형을 제외한 나머지 타입.
+        각 자료형이 가질 수 있는 값의 범위는 대강 정수형의 경우 -2의 (n-1)제곱 ~ 2의(n-1)제곱-1
+        (여기서 n은 비트수이다.) 정도만 기억하고 있으면 된다.
         */
         
     }
