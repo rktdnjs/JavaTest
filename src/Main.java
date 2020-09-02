@@ -10,7 +10,8 @@ public class Main {
         이때, printf는 출력 후 줄바꿈을 하지 않기때문에 줄바꿈을 하기 위해서는 지시자 %n을 넣어주면 된다.
         */
         
-        System.out.printf("age:%d", 14);
+        //%n 대신 \n 을 써도 되지만, OS마다 줄바꿈 문자가 다를 수 있기 때문에 %n을 쓰는것이 안전하다.
+        System.out.printf("age:%d%n", 14);
         
         //System.out.printf("age:%d year:%d", age, year)'
         System.out.printf("age:%d year:%d", 21, 2020);
