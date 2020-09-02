@@ -1,20 +1,28 @@
 public class Main {
     public static void main(String args[]) {
-        /* 기본형의 종류와 범위 57
-        같은 값이라도 다른 형식으로 출력하고 싶을 때. 
-        예를 들어 소수점 둘째자리까지만 출력하거나 정수를 16진수나 8진수로 출력할 때 printf() 를 쓴다.
-        printf는 지시자를 통해 변수의 값을 여러가지 형식으로 변환하여 출력하는 기능을 가지고있다.
-        '지시자' = 값을 어떻게 출력할 것인지를 지시해주는 역할.
-        정수형 변수에 저장된 값을 10진 정수로 출력할 때 => %d 
-        출력될 값과 지시자의 순서는 일치해야 한다.
-        이때, printf는 출력 후 줄바꿈을 하지 않기때문에 줄바꿈을 하기 위해서는 지시자 %n을 넣어주면 된다.
+        /* printf 를 이용한 출력 58
+        pritnf의 지시자 중에서 자주 사용되는 것들
+        %d : 10진 정수의 형식으로 출력 / %x : 16진 정수의 형식으로 출력
+        %f : 부동소수점의 형식으로 출력 / %c : 문자 출력 / %s : 문자열로 출력
         */
         
-        //%n 대신 \n 을 써도 되지만, OS마다 줄바꿈 문자가 다를 수 있기 때문에 %n을 쓰는것이 안전하다.
-        System.out.printf("age:%d%n", 14);
+        String url = "www.naver.com";
+        float f1 =.10f;  //0.10, 1.0e-1
+        float f2 = 1e1f; //10.0, 1.0e1, 1.0e1+1
+        float f3 = 3.14e3f;
+        double d = 1.23456789;
         
-        //System.out.printf("age:%d year:%d", age, year)'
-        System.out.printf("age:%d year:%d", 21, 2020);
+        //%e : 지수형태로 출력할 때 실수 지시자, %g : 값을 간략하게 표현할 때 실수 지시자.
+        //%f는 기본적으로 소수점 아래 6자리 까지만 출력한다. 7자리부터는 반올림한다.
+        System.out.printf("f1=%f, %e, %g%n", f1, f1, f1);
+        System.out.printf("f2=%f, %e, %g%n", f2, f2, f2);
+        System.out.printf("f3=%f, %e, %g%n", f3, f3, f3);
+        System.out.printf("d=%f%n", d);
+        System.out.printf("d=%14.10f%n", d); //전체 14자리 중 소수점 10자리 까지, 소수점의 공백부분은 0으로 채우고 앞자리는 공백.
+        System.out.printf("[12345678901234567890]%n");
+        
+        
+        
         
     }
 }
