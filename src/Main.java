@@ -21,6 +21,12 @@ public class Main {
         System.out.printf("d=%14.10f%n", d); //전체 14자리 중 소수점 10자리 까지, 소수점의 공백부분은 0으로 채우고 앞자리는 공백.
         System.out.printf("[12345678901234567890]%n");
         
+        System.out.printf("[%s]%n", url);
+        System.out.printf("[%20s]%n", url); //오른쪽 정렬, 20글자
+        System.out.printf("[%-20s]%n", url); //왼쪽 정렬, 20글자
+        System.out.printf("[%.8s]%n", url); //왼쪽에서 8글자만.
+        //.(숫자)s : 왼쪽에서 (숫자)까지 만 출력
+        
         
         
         
