@@ -1,28 +1,19 @@
 public class Main {
     public static void main(String args[]) {
         /* 기본형의 종류와 범위 57
-        기본형에는 모두 8개의 타입이 있으며, 크게 논리형, 문자형, 정수형, 실수형으로 구분된다.
-        정수형에서는 int 가 기본이고, 실수형에서는 double이 기본이다.
-                1    2    4    8    byte
-        논리형 boolean
-        문자형       char
-        정수형 byte  short int  long
-        실수형           float double
-        
-        기본 자료형의 종류와 크기는 반드시 외워야 하며, 도움되는 팁들이 몇가지 있다.
-        boolean 은 true false 두 가지 값만 표현할 수 있으면 되므로 가장 작은 크기인 1 byte
-        char은 자바에서 유니코드(2 byte 문자체계)를 사용하므로 2 byte
-        byte는 크기가 1 byte라서 byte
-        int(4byte)를 기준으로 짧아서 short(2byte), 길어서 long(8byte)
-        float는 실수값을 부동소수점(floating-point)방식으로 저장하기 때문에 float.
-        double은 float보다 두 배의 크기(8byte)를 갖기 때문에 double.
-        
-        각 자료형이 가질 수 있는 값의 범위는 대강 정수형의 경우 -2의 (n-1)제곱 ~ 2의(n-1)제곱-1
-        (여기서 n은 비트수이다.) 정도만 기억하고 있으면 된다.
+        같은 값이라도 다른 형식으로 출력하고 싶을 때. 
+        예를 들어 소수점 둘째자리까지만 출력하거나 정수를 16진수나 8진수로 출력할 때 printf() 를 쓴다.
+        printf는 지시자를 통해 변수의 값을 여러가지 형식으로 변환하여 출력하는 기능을 가지고있다.
+        '지시자' = 값을 어떻게 출력할 것인지를 지시해주는 역할.
+        정수형 변수에 저장된 값을 10진 정수로 출력할 때 => %d 
+        출력될 값과 지시자의 순서는 일치해야 한다.
+        이때, printf는 출력 후 줄바꿈을 하지 않기때문에 줄바꿈을 하기 위해서는 지시자 %n을 넣어주면 된다.
         */
         
-        //int 타입의 변수같은 경우 4바이트, 즉 32비트 이므로 2의 31제곱. 약 10자리 수(20억) 까지 계산할 수 있다.
-        //그러므로 대략 8자리 이상의 수를 계산할 때는 long타입으로 선언해 주는 것이 좋다.
-        //다음에는 printf 를 이용한 출력.
+        System.out.printf("age:%d", 14);
+        
+        //System.out.printf("age:%d year:%d", age, year)'
+        System.out.printf("age:%d year:%d", 21, 2020);
+        
     }
 }
