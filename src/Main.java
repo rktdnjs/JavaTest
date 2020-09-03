@@ -2,17 +2,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) {
-        /* 화면으로부터 입력받기 61
-        이해하기보다는 가져다 사용하는 정도로만 일단 활용!
+        /* 62~63
+        오버플로우 : 타입이 표현할 수 있는 값의 범위를 넘어서는 것을 오버플로우(overflow)라고 한다.
+        예를 들어 4bit 2진수의 최대값인 1111에 1을더하면 오버플로우가 발생해 0000이 된다.
+        반대로 최소값인 0000에 1을 빼면 오버플로우가 발생해 1111이 된다. (이때의 0000은 앞에 저장되어 있지 않은 1이 있다고 가정.)
         */
         
-        Scanner scanner = new Scanner(System.in); //Scanner 클래스의 '객체'를 생성\
-        //nextLine 메서드 호출, 입력대기 상태에 있다가 입력을 마치고 '엔터'를 누르면 입력한 내용이 문자열로 반환된다.
-        System.out.print("두 자리 정수를 하나 입력해보세용>");
-        String input =scanner.nextLine(); //입력받은 내용을 input에 저장
-        int num = Integer.parseInt(input); //입력받은 내용을 int타입의 값으로 저장, 입력받은 문자열을 숫자로 변환
+        short sMin = -32768; 
+        short sMax = 32767;
+        char cMin = 0;
+        char cMax = 65535;
         
-        System.out.println("입력내용 :"+input);
-        System.out.printf("num=%d%n", num);
+        System.out.println("sMin = " + sMin);
+        System.out.println("sMin-1 = " + (short)(sMin-1));
+        System.out.println("sMax = " + sMax);
+        System.out.println("sMax+1 = " + (short)(sMax+1));
+        System.out.println("cMin = " + (int)cMin);
+        System.out.println("cMin-1 = " + (int)--cMin);
+        System.out.println("cMax = " + (int)cMax);
+        System.out.println("cMax+1 = " +(int)++cMax); //cMax에 1을 먼저 더함.
+        
     }
 }
