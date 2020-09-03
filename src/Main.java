@@ -1,41 +1,18 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String args[]) {
-        /* printf 를 이용한 출력 58
-        pritnf의 지시자 중에서 자주 사용되는 것들
-        %d : 10진 정수의 형식으로 출력 / %x : 16진 정수의 형식으로 출력
-        %f : 부동소수점의 형식으로 출력 / %c : 문자 출력 / %s : 문자열로 출력
+        /* 화면으로부터 입력받기 61
+        이해하기보다는 가져다 사용하는 정도로만 일단 활용!
         */
         
-        /*
-        String url = "www.naver.com";
-        float f1 =.10f;  //0.10, 1.0e-1
-        float f2 = 1e1f; //10.0, 1.0e1, 1.0e1+1
-        float f3 = 3.14e3f;
-        */
-        double d = 1.23456789;
+        Scanner scanner = new Scanner(System.in); //Scanner 클래스의 '객체'를 생성\
+        //nextLine 메서드 호출, 입력대기 상태에 있다가 입력을 마치고 '엔터'를 누르면 입력한 내용이 문자열로 반환된다.
+        System.out.print("두 자리 정수를 하나 입력해보세용>");
+        String input =scanner.nextLine(); //입력받은 내용을 input에 저장
+        int num = Integer.parseInt(input); //입력받은 내용을 int타입의 값으로 저장, 입력받은 문자열을 숫자로 변환
         
-        /*
-        //%e : 지수형태로 출력할 때 실수 지시자, %g : 값을 간략하게 표현할 때 실수 지시자.
-        //%f는 기본적으로 소수점 아래 6자리 까지만 출력한다. 7자리부터는 반올림한다.
-        System.out.printf("f1=%f, %e, %g%n", f1, f1, f1);
-        System.out.printf("f2=%f, %e, %g%n", f2, f2, f2);
-        System.out.printf("f3=%f, %e, %g%n", f3, f3, f3);
-        System.out.printf("d=%f%n", d);
-        System.out.printf("d=%14.10f%n", d); //전체 14자리 중 소수점 10자리 까지, 소수점의 공백부분은 0으로 채우고 앞자리는 공백.
-        System.out.printf("[12345678901234567890]%n");
-        
-        System.out.printf("[%s]%n", url);
-        System.out.printf("[%20s]%n", url); //오른쪽 정렬, 20글자
-        System.out.printf("[%-20s]%n", url); //왼쪽 정렬, 20글자
-        System.out.printf("[%.8s]%n", url); //왼쪽에서 8글자만.
-        //.(숫자)s : 왼쪽에서 (숫자)까지 만 출력
-        */
-        
-        System.out.printf("d=%-20f%n", d);
-        System.out.printf("d=%.5f%n", d);
-        
-        
-        
-        
+        System.out.println("입력내용 :"+input);
+        System.out.printf("num=%d%n", num);
     }
 }
