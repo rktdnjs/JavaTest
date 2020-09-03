@@ -2,25 +2,26 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) {
-        /* 62~63
-        오버플로우 : 타입이 표현할 수 있는 값의 범위를 넘어서는 것을 오버플로우(overflow)라고 한다.
-        예를 들어 4bit 2진수의 최대값인 1111에 1을더하면 오버플로우가 발생해 0000이 된다.
-        반대로 최소값인 0000에 1을 빼면 오버플로우가 발생해 1111이 된다. (이때의 0000은 앞에 저장되어 있지 않은 1이 있다고 가정.)
+        /* 66 타입간의 변환과정.
+        프로그램에서 자주 사용되는 타입간의 변환과정. 반드시 정리하여 외우자.
+        
+        1.숫자를 문자로 변환하기 위해서는 숫자에 '0'을 더한다. (char)(3+'0') > '3'
+        2.문자를 숫자로 변환하기 위해서는 문자에서 '0'을 뺀다. '3'-'0'=3
+        3.숫자를 문자열로 변환하기 위해서는 숫자에 빈 문자열("")을 더한다. 3+""="3"
+        4.문자열을 숫자로 변환하기 위해서는 Integer.parseInt() or Double.parseDouble() 을 쓴다.
+        Integer.parseInt("3") = 3
+        Double.parseDouble("3.14") = 3.14
+        5.문자열을 문자로 변환하기 위해서는 charAt(0)을 쓴다. "3".charAt(0) = '3'
+        6.문자를 문자열로 변환하기 위해서는 빈 문자열("")을 더한다. '3' + "" = "3"
         */
         
-        short sMin = -32768; 
-        short sMax = 32767;
-        char cMin = 0;
-        char cMax = 65535;
+        String str = "3";
         
-        System.out.println("sMin = " + sMin);
-        System.out.println("sMin-1 = " + (short)(sMin-1));
-        System.out.println("sMax = " + sMax);
-        System.out.println("sMax+1 = " + (short)(sMax+1));
-        System.out.println("cMin = " + (int)cMin);
-        System.out.println("cMin-1 = " + (int)--cMin);
-        System.out.println("cMax = " + (int)cMax);
-        System.out.println("cMax+1 = " +(int)++cMax); //cMax에 1을 먼저 더함.
+        System.out.println(str.charAt(0) - '0');  //문자열을 문자로 변환 후 연산
+        System.out.println('3' - '0' + 1); //문자를 숫자로 변환 후 연산
+        System.out.println(Integer.parseInt("3") + 1); //문자열을 숫자로 변환 후 연산
+        System.out.println("3" + 1); //문자열 + 그 외 일 경우 나머지를 문자열로 변환 후 연산
+        System.out.println((char)(3 + '0')); //숫자를 문자로 변환후 출력, 이때 문자를 뜻하는 char를 사용.
         
     }
 }
