@@ -12,16 +12,9 @@ public class Main {
         */
         
         int i=5;
-        int j=0;
-        
-        j=i++;
-        System.out.println("j=i++; 실행 후, i=" + i +", j="+ j);
-        
-        i=5; // 결과를 비교하기 위해, i와j의 값을 다시 5와0으로 변경
-        j=0;
-        
-        j=++i;
-        System.out.println("j=++i; 실행 후, i=" + i +", j="+ j);
-        
+        int j=5;
+        System.out.println(i++); //i의 값을 출력후, 1증가
+        System.out.println(++j); //j의 값을 1증가후, 출력
+        System.out.println("i= "+i+ ", j= "+j);
     }
 }
