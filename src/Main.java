@@ -1,19 +1,18 @@
-import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) {
-        /* 79 사칙연산자
+        /* 80
+        산술변환
+        이항 연산자는 두 피연산자의 타입이 일치해야 연산이 가능하므로 피연산자의 타입을 연산전에 형변환 연산자를 통해 타입을 일치시켜야 한다.
+        연산전에 피연산자 타입의 일치를 위해 자동 형변환되는 것을 산술변환 혹은 일반산술벼환이라 하며 이 벼환은 이항 연산이 아닌 단항 연산에서도 일어난다.
+        '산술 변환'의 규칙
+        1. 두 피연산자의 타입을 같게 일치시킨다. (보다 큰 타이븡로 일치)
+        2. 피연산자의 타입이 int보다 작은 타입이면 int로 변환된다.
         
+        연산결과의 타입은 피연산자의 타입과 일치한다!!
         */
         
-        int a = 10;
-        int b = 4;
-        
-        System.out.printf("%d+%d = %d%n", a, b, a + b);
-        System.out.printf("%d -%d = %d%n", a, b, a - b);
-        System.out.printf("%d * %d = %d%n", a, b, a*b);
-        System.out.printf("%d / %d = %d%n", a, b, a/b);
-        System.out.printf("%d / %f = %f%n", a, (float)b, a/(float)b);
-        
+        System.out.println(5/2);
+        System.out.println(5/(float)2); //한쪽을 float로 변형시켜서 결과값또한 float값이되어 연산결과 값을 float값을 얻을 수 있다.
     }
 }
