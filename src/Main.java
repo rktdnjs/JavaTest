@@ -12,7 +12,11 @@ public class Main {
         연산결과의 타입은 피연산자의 타입과 일치한다!!
         */
         
-        System.out.println(5/2);
-        System.out.println(5/(float)2); //한쪽을 float로 변형시켜서 결과값또한 float값이되어 연산결과 값을 float값을 얻을 수 있다.
+        byte a =10;
+        byte b =30;
+        byte c = (byte)(a*b); //int보다 작은 자료형인 상태로 연산을 진행하면 int형으로 변형되므로, 큰 자료형값을 저장하기 위해선 해당하는 자료형으로 변형해줘야 에러가 뜨지 않는다.
+        System.out.println(c);
+        
+        //출력값은 300이 아닌 44가 나오는데, 300이 byte의 자료형 값의 범위를 넘기 때문에 데이터 손실이 발생하여 44가 byte형 변수c에 저장된다.
     }
 }
