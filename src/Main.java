@@ -1,28 +1,30 @@
+import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
-        /* 85 86 비교 연산자 & 문자열의 비교
-        대소 비교 연산자 > < >= <=
-        등가 비교 연산자 == =! 여기서 =!는 두 값이 다르면 true or false.
-        주의할 점은 두 개의 기호로 이루어진 연산자는 기호의 순서를 바꾸거나 중간에 공백이 들어가면 안된다.
-        
-        두 문자열을 비교할 때는 비교 연산자 == 대신 equals()라는 메서드를 사용해야 한다.
-        비교 연산자는 두 문자열이 완전히 같은 것인지 비교할 뿐이기 대문에, 문자열의 내용이 같은지 비교하기 위해서는
-        equals()를 사용하면 된다. equals()는 비교하는 두 문자열이 같으면 true 아니면 false를 반환한다.
+        /* 87 88 89 논리 연산자 && || !
+		논리 연산자는 둘 이상의 조건을 그리고 혹은 또는 으로 연결하여 하나의 식으로 표현할 수 있게 해준다.
+		논리연산자 &&는 '그리고'에 해당하며 두 피연산자가 모두 true일때 true값을 결과로 얻는다.
+		||는 '또는'에 해당하며 두 피연산자 중 어느 한쪽만 true이어도 결과를 true로 얻는다.
+		논리 연산자는 피연산자로 boolean형 또는 boolean형 값을 결과로 하는 조건식만을 허용한다.
+		&&와 ||가 동시에 쓰일 경우 &&가 우선순위가 높아 먼저 계산된다.
         */
         
-        // String str = new String("abc"); String은 원래 클래스 이므로 new를 통해 객체를 생성한다.
-        // String str = abc; 
-        //특별히 String만 new를 사용하지 않고 위와 같이 간단히 쓸 수 있다.
-        String str1 = "abc";
-        String str2 = new String("abc");
+		//문자를 입력받아서 숫자인지 영문자인지 확인해주는 프로그램.
+		Scanner sc = new Scanner(System.in);
+		char ch = ' ';
+		
+		System.out.printf("문자를 하나 입력하세요.>");
+		
+		String input = sc.nextLine();
+		ch = input.charAt(0);
+		
+		if('0' <= ch && ch <= '9') {
+			System.out.printf("입력하신 문자는 숫자입니다.%n");
+		}
         
-        System.out.printf("\"abc\" == \"abc\" ? %b%n", "abc" == "abc"); //==를 서서 비교후 boolean값 출력.
-        System.out.printf(" str1 == \"abc\" ? %b%n", str1 == "abc"); //아래와 동일.
-        System.out.printf(" str2 == \"abc\" ? %b%n", str2 == "abc"); //결과값은 false. 이유는 내용은 같지만 서로 다른 객체여서 그렇다.
-        System.out.printf("str1.equals(\"abc\") ? %b%n", str1.equals("abc")); //equals를 써서 비교후 boolean 값 출력.
-        System.out.printf("str2.equals(\"abc\") ? %b%n", str2.equals("abc")); //equals는 객체가 달라도 내용이 같으면 true를 반환한다.
-        System.out.printf("str2.equals(\"ABC\") ? %b%n", str2.equals("ABC"));
-        System.out.printf("str2.equalsIgnoreCase(\"ABC\") ? %b%n", str2.equalsIgnoreCase("ABC")); //equalsIgnoreCase는 대소문자를 구별하지 않고 비교한다.
+		if(('a' <= ch && ch <= 'z') || ('A' <= ch && ch <= 'Z')) {
+			System.out.printf("입력하신 문자는 영문자입니다.%n");
+		}
     }
 }
