@@ -2,24 +2,32 @@ import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
-        /* if-else 문, 101page.
+        /* if-else if문 103p
         
         */
+        int score = 0; //점수를 저장하기 위한 변수
+        char grade = ' '; //학점을 저장하기 위한 변수
         
-        System.out.println("숫자를 하나 입력하세요");
+        System.out.print("점수를 입력해보세요 >^< >>");
         Scanner sc = new Scanner(System.in);
-        int input;
-        input = sc.nextInt(); //화면을 통해 입력받은 숫자를 input에 저장
+        score = sc.nextInt(); //입력받은 숫자를 score에 저장
         
-        if(input==0)
-        {
-            System.out.println("입력하신 숫자는 0입니다");
+        if(score >= 90){
+            grade = 'A';
         }
-        else
-        {
-            System.out.println("입력하신 숫자는 0이 아닙니다");    
+        else if(score >= 80){
+            grade = 'B';
         }
-        
-        
+        else if(score >= 70){
+            grade = 'C';
+        }
+        else if(score >= 60){
+            grade = 'D';
+        }
+        else{
+            grade = 'F';
+            System.out.println("앗!!! 축하드립니다....재수강이에요 >^<");
+        }
+        System.out.println("앗!!! 당신의 학점은" + grade + "입니다.");
         }
 	}
