@@ -14,6 +14,7 @@ public class Main {
         
         if(score >= 90){
             grade = 'A';
+            System.out.println("앗!!!! 당신은 과탑에 한 걸음 가까이 다가가셨습니다...good");
         }
         else if(score >= 80){
             grade = 'B';
