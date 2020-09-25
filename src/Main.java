@@ -36,7 +36,7 @@ public class Main {
         }
         
         else {
-            grade = 'C';
+            grade = 'C'; //나머지는 그냥 C ㅎㅎ 재수강 ㄱ
         }
         
         System.out.printf("당신의 학점은 %c%c입니다.%n", grade, opt);
