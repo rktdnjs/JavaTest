@@ -3,30 +3,23 @@ import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
-        /* switch 문 108p
+        /* Math.random(), 임의의 정수만들기
+        임의의 수를 얻기 위해서는 Math.random()을 사용해야 하는데
+        이 메서드는 0.0과 1.0사이의 범위에 속하는 하나의 double값을 반환한다.
+        범위는 0.0 <= Math.random() < 1.0
+        요리조리 곱하고 int형으로 반환하고 각 변에 숫자를 더하는 등의 조작을 해주면
+        임의의 정수 값을 얻어낼 수 있다.
         예제 만들기
         */
         
-        //입력되는 숫자값에따라 계절을 출력해주는 프로그램.
-        System.out.print("현재 월을 입력해주세용 >>");
+        //임의의 정수를 출력하는 프로그램.
         
-        Scanner scanner = new Scanner(System.in);
-        int month = scanner.nextInt();
+        int num = 0;
         
-        switch(month) {
-            case 3: //case문은 한줄에 붙여서 쓰던, 한 줄에 하나씩 쓰던 상관이 없다.
-            case 4:
-            case 5:
-                System.out.println("현재 계절은 봄입니다. ^-^");
-                break;
-            case 6: case 7: case 8:
-                System.out.println("현재 계졀은 여름입니다. ^-^;;");
-                break;
-            case 9: case 10: case 11:
-                System.out.println("현재 계절은 가을입니다. ^-^....");
-            default:
-          //case 12: case 1: case 2:
-                System.out.println("현재 계절은 겨울~~입니다. ^~^");
+        // 괄호{}안의 내용을 5번 반복한다.
+        for (int i = 1; i <= 5; i++) {  //i의 값을 1부터 시작해서 후위형으로 1씩 증가시킨다. i값이 최종적으로는 6이된다.
+            num = (int) (Math.random()*6) +1; // 1 <= (Math.random()*6) + 1< 7
+            System.out.println(num);
         }
         
         }
