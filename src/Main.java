@@ -14,7 +14,7 @@ public class Main {
         int month = scanner.nextInt();
         
         switch(month) {
-            case 3:
+            case 3: //case문은 한줄에 붙여서 쓰던, 한 줄에 하나씩 쓰던 상관이 없다.
             case 4:
             case 5:
                 System.out.println("현재 계절은 봄입니다. ^-^");
