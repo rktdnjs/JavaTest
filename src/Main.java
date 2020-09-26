@@ -8,6 +8,7 @@ public class Main {
         */
         
         //입력되는 숫자값에따라 계절을 출력해주는 프로그램.
+        System.out.print("현재 월을 입력해주세용 >>");
         
         Scanner scanner = new Scanner(System.in);
         int month = scanner.nextInt();
