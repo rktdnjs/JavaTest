@@ -3,23 +3,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
-        /* Math.random(), 임의의 정수만들기
-        임의의 수를 얻기 위해서는 Math.random()을 사용해야 하는데
-        이 메서드는 0.0과 1.0사이의 범위에 속하는 하나의 double값을 반환한다.
-        범위는 0.0 <= Math.random() < 1.0
-        요리조리 곱하고 int형으로 반환하고 각 변에 숫자를 더하는 등의 조작을 해주면
-        임의의 정수 값을 얻어낼 수 있다.
-        예제 만들기
+        /* for 문, 110page
+        반복문의 종류로는 for과 while문, do-while문이있다.
+        for과 while은 구조와 기능이 유사하여 어느 경우에나 서로 변환이 가능하며, 반복 횟수를 알고 있을 때는 for문을
+        그렇지 않을 때는 while문을 사용한다.
+        
+        for문의 경우 초기화, 조건식, 증감식, 블럭{} 의 4부분으로 이루어져 있으며
+        조건식이 참인 동안 블럭{}내의 문장들을 반복하다 거짓이 되면 반복문을 벗어난다.
         */
         
-        //임의의 정수를 출력하는 프로그램.
-        
-        int num;
-        
-        // 괄호{}안의 내용을 5번 반복한다.
-        for (int i = 1; i <= 5; i++) {  //i의 값을 1부터 시작해서 후위형으로 1씩 증가시킨다. i값이 최종적으로는 6이된다.
-            num = (int) (Math.random()*6) +1; // 1 <= (Math.random()*6) + 1< 7
-            System.out.println(num);
+        for (int i = 1; i <=5; i++) {
+            System.out.println("TFT mobile dudung deung jang");
         }
         
         }
