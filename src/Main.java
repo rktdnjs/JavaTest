@@ -16,7 +16,7 @@ public class Main {
         
         for(int i=1; i<=5; i++) {
             sum += i; //sum = sum + i;
-            System.out.printf("1부터 %2d까지의 합: %2d%n", i, sum);
+            System.out.printf("1부터 %d까지의 합: %d%n", i, sum);
         }
         }
 	}
