@@ -1,22 +1,19 @@
-import java.text.BreakIterator;
 import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
-        /* for 문, 112page
-        반복문의 종류로는 for과 while문, do-while문이있다.
-        for과 while은 구조와 기능이 유사하여 어느 경우에나 서로 변환이 가능하며, 반복 횟수를 알고 있을 때는 for문을
-        그렇지 않을 때는 while문을 사용한다.
-        
-        for문의 경우 초기화, 조건식, 증감식, 블럭{} 의 4부분으로 이루어져 있으며
-        조건식이 참인 동안 블럭{}내의 문장들을 반복하다 거짓이 되면 반복문을 벗어난다.
+        /* 중첩 for 문
+        중첩 for문의 중첩 횟수는 거의 제한이 없다.
+        별 찍기로 설명하기 아주 좋다.
         */
         
-        int sum = 0;
-        
+        //10개의 별 5줄로 찍기 ver.1
         for(int i=1; i<=5; i++) {
-            sum += i; //sum = sum + i;
-            System.out.printf("1부터 %d까지의 합: %d%n", i, sum);
+            for(int j=1; j<=10; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
+        
         }
 	}
