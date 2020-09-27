@@ -8,17 +8,22 @@ public class Main {
         다만 while문은 조건식이 참인동안 계속 반복하는 점을 유의하자.
         */
         
-        //1~10까지의 정수를 출력하기
-        for(int i=1; i<=10; i++) {
-            System.out.println(i); //for문 버전
+        //지금까지 배워온 for과 while을 이용하여 입력한 숫자만큼 별이 입력되고 끝나는 프로그램을 만들어봄.
+        
+        int count;
+        System.out.print("숫자 하나를 입력해주세요 >^< >>");
+        Scanner sc = new Scanner(System.in);
+        count = sc.nextInt();
+        
+        while(count > 0) {
+            for (int i = count; i>0; i--) {
+                System.out.print("*");
+            }
+            System.out.println();
+            count--;
         }
         
-        int i=1; //초기화
-        
-        while(i<=10) {
-            System.out.println(i);
-            i++; //증감식을 따로 써줌.
-        }
         
         }
+    
 	}
