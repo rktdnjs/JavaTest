@@ -12,12 +12,11 @@ public class Main {
         조건식이 참인 동안 블럭{}내의 문장들을 반복하다 거짓이 되면 반복문을 벗어난다.
         */
         
-        for(int i =1; i<=5; i++)
-            System.out.println(i);
+        int sum = 0;
         
-        for(int i=1; i<=5; i++)
-            System.out.print(i);
-        
-        System.out.println(); //공백 출력후 줄 바꿈
+        for(int i=1; i<=5; i++) {
+            sum += i; //sum = sum + i;
+            System.out.printf("1부터 %2d까지의 합: %2d%n", i, sum);
+        }
         }
 	}
