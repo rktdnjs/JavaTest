@@ -7,10 +7,12 @@ public class Main {
         별 찍기로 설명하기 아주 좋다.
         */
         
-        //10개의 별 5줄로 찍기 ver.2
+        //별 1 2 3 4 5 개씩 찍기
         for(int i=1; i<=5; i++) {
-                System.out.print("**********");
-                System.out.println();
+            for(int j=1; j<=i; j++) {
+                System.out.print("*");
             }
+            System.out.println();
+        }
         }
 	}
