@@ -8,13 +8,15 @@ public class Main {
         다만 while문은 조건식이 참인동안 계속 반복하는 점을 유의하자.
         */
         
-        //while문 예제
+        //while문 예제, 1부터 몇까지 더해야 100을 넘지 않는가?
+        int sum = 0;
+        int i = 0;
         
-        int i = 5;
-        
-        while(i--!=0) {
-            System.out.println(i + " - I can do it.");
+        while (sum <= 100) {
+            System.out.printf("%d - %d%n", i, sum);
+            sum += ++i; //sum 과 증가된 i를 계속해서 더한다.
         }
+        
         }
     
 	}
