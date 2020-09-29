@@ -10,6 +10,8 @@ public class Main {
         그리많이 쓰이지는 않지만 반복적으로 사용자의 입력을 받아서 처리할 때 유용하다.
         */
         
+        //1~100사이의 숫자 맞추기 프로그램.
+        
         int input = 0, answer = 0;
         
         answer = (int)(Math.random()*100) + 1; //1~100사이의 임의의 수를 저장, 원래 범위는 0<=Math.random<1이다. 계산하면 1<=Math.random<101이므로 1~100.
