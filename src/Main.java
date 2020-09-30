@@ -1,38 +1,25 @@
+import java.text.BreakIterator;
 import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
-        /* break + continue, 121page
-        
+        /* 이름붙은 반복문, 122page
+        break는 근접한 단 하나의 반복문만 벗어날 수 있기 때문에, 여러개의 반복문이 중첩된 경우에는
+        break문으로 중첩 반복문을 완전히 벗어날 수 없다. 이럴 때는 중첩 반복문 앞에 이름을 붙이고 break문과 continue문에 이름을
+        지정해 줌으로써 하나 이상의 반복문을 벗어나거나 반복을 건너뛸 수 있다.
         */
         
-        //메뉴를 보여주고 선택하는 것을 반복.
-        int menu = 0;
-        int num = 0;
-        
-        Scanner sc = new Scanner(System.in);
-        
-        while(true) {
-            System.out.println("(1) square");
-            System.out.println("(2) square root");
-            System.out.println("(3) log");
-            System.out.print("원하는 메뉴(1~3)를 선택하세요.(종료는 0을 누르세요) >> ");
-            
-            String tmp = sc.nextLine();
-            menu = Integer.parseInt(tmp);
-            
-            if(menu==0) {
-                System.out.println("프로그램을 종료합니다.");
-                break;
-            } 
-            
-            else if (!(1 <= menu && menu <= 3)) {
-                System.out.println("메뉴를 잘못선택하셨습니다.(종료는 0을 누르세요)");
-                continue;
+        //for 문의 이름은 Loop1 이라 지정.
+        Loop1 : for(int i=2; i<=9; i++) {
+            for(int j=1; j<=9; j++) {
+                if(j==5)
+                    break Loop1;
+                //break; 단순히 break 사용 시 제일 근접한 for문만 벗어난다.
+                //continue Loop1; => Loop1 반복문으로 벗어나 다시 실행. 이런 문장은 거의 쓸일이 없을 것.
+                //continue; => 바로 반복문의 끝으로 가서 다시 반복문 실행.
+                System.out.println(i+"*"+j+"*"+ i*j);
             }
-            System.out.println("선택하신 메뉴는 " + menu +"번입니다.");
+            System.out.println();
+            }
         }
-        
-        }
-    
 	}
