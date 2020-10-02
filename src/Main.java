@@ -6,20 +6,16 @@ public class Main {
         int A;
         A = sc.nextInt();
         
-        if(90<=A && A<=100) {
-            System.out.print('A');
-        }
-        else if(80<=A && A<=89) {
-            System.out.print('B');
-        }
-        else if(70<=A && A<=79) {
-            System.out.print('C');
-        }
-        else if(60<=A && A<=69) {
-            System.out.print('D');
+        if (A%4==0) {
+            if(A%100!=0 || A%400==0) {
+                System.out.print(1);
+            }
+            else {
+                System.out.print(0);
+            }
         }
         else {
-            System.out.print('F');
+            System.out.print(0);
         }
     }
 }
