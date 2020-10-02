@@ -3,20 +3,23 @@ import java.util.*;
 public class Main {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        int A, B;
+        int A;
         A = sc.nextInt();
-        B = sc.nextInt();
         
-        if (A>B) {
-            System.out.print('>');
+        if(90<=A) {
+            System.out.print('A');
         }
-        
-        else if (A<B) {
-            System.out.print('<');
+        else if(80<=A) {
+            System.out.print('B');
         }
-        
+        else if(70<=A) {
+            System.out.print('C');
+        }
+        else if(60<=A) {
+            System.out.print('D');
+        }
         else {
-            System.out.print("==");
+            System.out.print('F');
         }
     }
 }
