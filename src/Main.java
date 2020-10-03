@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String args[]) {
+        //윤년 이면 1을 출력, 아니면 0을 출력하는 프로그램.
         Scanner sc = new Scanner(System.in);
         int A;
         A = sc.nextInt();
