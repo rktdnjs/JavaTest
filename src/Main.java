@@ -1,22 +1,28 @@
-import java.io.*;
 import java.util.*;
 
 public class Main {
-        public static void main(String[] args) throws Exception{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int x = Integer.parseInt(br.readLine().trim());
-        int y = Integer.parseInt(br.readLine().trim());
-        if(x>0) {
-        	if(y>0)
-        		System.out.println("1");
-        	else
-        		System.out.println("4");
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a,b;
+        a = sc.nextInt();
+        b = sc.nextInt();
+        
+        if (b<45) {
+            if(a==0) {
+                a = 23;
+                b = 60-(45-b);
+                System.out.print(a+" "+b);
+            }
+            else{
+            a = a-1;
+            b = 60-(45-b);
+            System.out.print(a+" "+b);
+            }
         }
-        else {
-        	if(y<0)
-        		System.out.println("3");
-        	else
-        		System.out.println("2");
+        
+        else { //(b>=45)
+            b = b-45;
+            System.out.print(a+" "+b);
         }
     }
 }
